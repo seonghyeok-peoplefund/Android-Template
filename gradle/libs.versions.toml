@@ -58,6 +58,8 @@ androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayo
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment" }
 androidx-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
 androidx-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
+androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
+androidx-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
 # AndroidX Data
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
@@ -96,7 +98,7 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 [bundles]
 kotlin = ["kotlin", "kotlinx-coroutines-android", "kotlinx-coroutines-core"]
-androidx-presentation = ["androidx-core", "androidx-appcompat", "androidx-constraintlayout", "androidx-fragment", "androidx-viewmodel", "androidx-livedata"]
+androidx-presentation = ["androidx-core", "androidx-appcompat", "androidx-constraintlayout", "androidx-fragment", "androidx-viewmodel", "androidx-livedata", "androidx-navigation-fragment", "androidx-navigation-ui"]
 androidx-data = ["androidx-room-runtime", "androidx-room-coroutine"]
 network = ["retrofit", "retrofit-coroutines-adapter", "retrofit-scalars-converter", "kotlinx-serialization", "kotlinx-serialization-converter"]
 flipper = ["flipper", "flipper-network", "flipper-leakcanary", "flipper-soloader"]

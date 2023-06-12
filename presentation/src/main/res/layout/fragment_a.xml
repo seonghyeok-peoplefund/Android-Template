@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.ray.template.presentation.ui.main.a.AViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/container2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goToB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/blue_50"
+                android:text="LiveData"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow1CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goToC"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/blue_50"
+                android:text="LiveData + Event"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow2CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="StateFlow"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow3CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/green_50"
+                android:text="StateFlow + Event\n(현재 State)"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow4CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/green_50"
+                android:text="SharedFlow"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow5CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/green_50"
+                android:text="SharedFlow + Event\n(현재 Event)"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/count_6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@{vm.flow6CountText}"
+                android:textAppearance="?attr/typographyHeadline6"
+                android:textColor="@color/gray_400" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/red_50"
+            android:onClick="@{()->vm.onConfirm()}"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/container1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/value_6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAppearance="?attr/typographyHeadline6" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
